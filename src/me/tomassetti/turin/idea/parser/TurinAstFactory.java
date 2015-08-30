@@ -21,7 +21,7 @@ public class TurinAstFactory extends ASTFactory {
     private static final Map<IElementType, PsiElementFactory> ruleElementTypeToPsiFactory = new HashMap<IElementType, PsiElementFactory>();
     static {
         // later auto gen with tokens from some spec in grammar?
-        //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(TurinParser.RULE_rules), RulesNode.Factory.INSTANCE);
+        //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(me.tomassetti.parser.antlr.TurinParser.RU), RulesNode.Factory.INSTANCE);
         //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(ANTLRv4Parser.RULE_parserRuleSpec), ParserRuleSpecNode.Factory.INSTANCE);
         //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(ANTLRv4Parser.RULE_lexerRule), LexerRuleSpecNode.Factory.INSTANCE);
         //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(ANTLRv4Parser.RULE_grammarSpec), GrammarSpecNode.Factory.INSTANCE);
@@ -61,6 +61,7 @@ public class TurinAstFactory extends ASTFactory {
     public static PsiElement createInternalParseTreeNode(ASTNode node) {
         PsiElement t;
         IElementType tokenType = node.getElementType();
+        System.out.println("FEDERICO "+node.getText()+" : " +node.getElementType().getIndex());
         PsiElementFactory factory = ruleElementTypeToPsiFactory.get(tokenType);
         if (factory != null) {
             t = factory.createElement(node);

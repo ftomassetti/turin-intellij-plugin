@@ -19,10 +19,13 @@ import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAtt
  */
 public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
 
-    public static final TextAttributesKey NAMESPACE_KW = createTextAttributesKey("NAMESPACE_KW", DefaultLanguageHighlighterColors.KEYWORD);
-    public static final TextAttributesKey COMMENT = createTextAttributesKey("LINE_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);
+    public static final TextAttributesKey KEYWORD= createTextAttributesKey("TURIN_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD);
+    public static final TextAttributesKey IDENTIFIER = createTextAttributesKey("TURIN_IDENTIFIER", DefaultLanguageHighlighterColors.IDENTIFIER);
+    public static final TextAttributesKey COMMENT = createTextAttributesKey("TURIN_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);
 
-    private static final TextAttributesKey[] KEYWORDS_KEYS = new TextAttributesKey[]{NAMESPACE_KW};
+    private static final TextAttributesKey[] KEYWORDS_KEYS = new TextAttributesKey[]{KEYWORD};
+    private static final TextAttributesKey[] COMMENT_KEYS = new TextAttributesKey[]{COMMENT};
+    private static final TextAttributesKey[] IDENTIFIER_KEYS = new TextAttributesKey[]{IDENTIFIER};
     private static final TextAttributesKey[] EMPTY_KEYS = new TextAttributesKey[]{};
 
     @NotNull
@@ -34,10 +37,14 @@ public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
     @NotNull
     @Override
     public TextAttributesKey[] getTokenHighlights(IElementType tokenType) {
-        if (TurinTokenTypes.KEYWORDS.contains(tokenType)) {
+        /*if (TurinTokenTypes.KEYWORDS.contains(tokenType)) {
             return KEYWORDS_KEYS;
-        } else {
-            return EMPTY_KEYS;
-        }
+        } else if (TurinTokenTypes.IDENTIFIERS.contains(tokenType)) {
+            return IDENTIFIER_KEYS;
+        } else if (TurinTokenTypes.COMMENTS.contains(tokenType)) {
+            return COMMENT_KEYS;
+        } else {*/
+            return new TextAttributesKey[]{DefaultLanguageHighlighterColors.CLASS_NAME};
+        //}
     }
 }

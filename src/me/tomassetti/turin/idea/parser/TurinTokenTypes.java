@@ -37,13 +37,20 @@ public class TurinTokenTypes {
             ElementTypeFactory.createTokenSet(
                     TurinLanguage.INSTANCE,
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
-                    me.tomassetti.parser.antlr.TurinLexer.WS);
+                    me.tomassetti.parser.antlr.TurinLexer.WS, me.tomassetti.parser.antlr.TurinLexer.NL);
 
     public static final TokenSet KEYWORDS =
             ElementTypeFactory.createTokenSet(
                     TurinLanguage.INSTANCE,
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
-                    TurinLexer.NAMESPACE_KW);
+                    TurinLexer.NAMESPACE_KW, TurinLexer.TYPE_KW, TurinLexer.VAL_KW, TurinLexer.PROPERTY_KW);
+
+    public static final TokenSet IDENTIFIERS =
+            ElementTypeFactory.createTokenSet(
+                    TurinLanguage.INSTANCE,
+                    Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
+                    TurinLexer.ID, TurinLexer.TID);
+
 
     public static RuleElementType getRuleElementType(@MagicConstant(valuesFromClass = TurinParser.class)int ruleIndex){
         return RULE_ELEMENT_TYPES.get(ruleIndex);

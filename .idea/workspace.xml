@@ -2,33 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fe96e52-59e3-428c-a79d-9311e5fcdc9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/AntlrLexerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/AntlrLexerState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/AntlrParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/AstBuilderListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/CharSequenceCharStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/ElementTypeFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/PsiElementFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/PsiTokenSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/RuleElementType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/SimpleAntlrAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/SyntaxError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/SyntaxErrorListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/TokenElementType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/TokenStreamSubset.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinAstFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinLexer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinNodeType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinParserDefinition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighligher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighlighterFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenTypes.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_tunnelvisionlabs_antlr4_runtime_4_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinColorSettingsPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinAstFactory.java" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinAstFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighligher.java" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighligher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenTypes.java" afterPath="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenTypes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/ranma.to" afterPath="$PROJECT_DIR$/examples/ranma.to" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/turin-intellij-plugin.iml" afterPath="$PROJECT_DIR$/turin-intellij-plugin.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="turin-intellij-plugin.iws" />
@@ -54,68 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TurinAstFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinAstFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="1440">
-              <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LeafPsiElement.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../idea/platform/core-impl/src/com/intellij/psi/impl/source/tree/LeafPsiElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12338157" vertical-offset="0" max-vertical-offset="4230">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-              <folding>
-                <element signature="e#1967#1968#0" expanded="true" />
-                <element signature="e#1994#1995#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ranma.to" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/ranma.to">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
-              <caret line="27" column="138" selection-start-line="27" selection-start-column="138" selection-end-line="27" selection-end-column="138" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
+              <caret line="26" column="94" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TurinSyntaxHighligher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighligher.java">
+      <file leaf-file-name="TurinParserDefinition.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinParserDefinition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
-              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SyntaxHighlighterColors.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../idea/platform/editor-ui-api/src/com/intellij/openapi/editor/SyntaxHighlighterColors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-              <caret line="22" column="58" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.054836255" vertical-offset="0" max-vertical-offset="1313">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -125,7 +56,19 @@
         <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighlighterFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TurinSyntaxHighligher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighligher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,10 +79,9 @@
       <file leaf-file-name="TurinLexer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinLexer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="360">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
               <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#322#323#0" expanded="true" />
                 <element signature="e#429#430#0" expanded="true" />
               </folding>
@@ -147,23 +89,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TurinTokenTypes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenTypes.java">
+      <file leaf-file-name="DefaultLanguageHighlighterColors.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../idea/platform/editor-ui-api/src/com/intellij/openapi/editor/DefaultLanguageHighlighterColors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1098">
-              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1134">
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TokenSet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../idea/platform/core-api/src/com/intellij/psi/tree/TokenSet.java">
+      <file leaf-file-name="SyntaxHighlighterBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../idea/platform/editor-ui-api/src/com/intellij/openapi/fileTypes/SyntaxHighlighterBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3186">
-              <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1710">
+              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SyntaxHighlighter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../idea/platform/editor-ui-api/src/com/intellij/openapi/fileTypes/SyntaxHighlighter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="846">
+              <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextAttributesKey.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../idea/platform/core-api/src/com/intellij/openapi/editor/colors/TextAttributesKey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2448" max-vertical-offset="2844">
+              <caret line="172" column="34" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextAttributes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../idea/platform/core-api/src/com/intellij/openapi/editor/markup/TextAttributes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="3096">
+              <caret line="33" column="62" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -207,19 +177,95 @@
         <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinParserDefinition.java" />
         <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinTokenTypes.java" />
         <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/ANTLRv4ASTFactory.java" />
-        <option value="$PROJECT_DIR$/examples/ranma.to" />
         <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighlighterFactory.java" />
+        <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenTypes.java" />
+        <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinColerSettingsPage.java" />
+        <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinAstFactory.java" />
+        <option value="$PROJECT_DIR$/examples/ranma.to" />
         <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighligher.java" />
-        <option value="$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinAstFactory.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="2495" />
-    <option name="height" value="1444" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Code maturity issues</id>
+          </State>
+          <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
+            <id>Control FlowGroovy</id>
+          </State>
+          <State>
+            <id>Control flow issues</id>
+          </State>
+          <State>
+            <id>Data flow issuesGroovy</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Encapsulation issues</id>
+          </State>
+          <State>
+            <id>Error handling</id>
+          </State>
+          <State>
+            <id>Error handlingGroovy</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>JUnit issues</id>
+          </State>
+          <State>
+            <id>Memory issues</id>
+          </State>
+          <State>
+            <id>Method MetricsGroovy</id>
+          </State>
+          <State>
+            <id>Method metrics</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -244,6 +290,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -277,50 +325,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="turin-intellij-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="turin-intellij-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="turin-intellij-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="turin-intellij-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="highlighting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,8 +386,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,7 +397,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.main.proportions" value="0.2925" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/antlr4-runtime-4.5.1-1.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -409,7 +411,7 @@
     <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="PsiViewer.ProjectComponent">
-    <option name="HIGHLIGHT" value="false" />
+    <option name="HIGHLIGHT" value="true" />
     <option name="FILTER_WHITESPACE" value="false" />
     <option name="SHOW_PROPERTIES" value="true" />
     <option name="SPLIT_DIVIDER_POSITION" value="300" />
@@ -621,7 +623,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="2495" height="1444" extended-state="6" />
+    <frame x="65" y="24" width="2495" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -682,93 +684,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/PsiElementFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="288">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/SyntaxError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="756">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/SyntaxErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="666">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14022">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/turin_logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1313">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinIcons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/turin-intellij-plugin.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1313">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12060">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1313">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1313">
@@ -797,35 +712,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinNodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinFileFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,9 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
           <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,13 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/turin-parser-0.0.1-SNAPSHOT.jar!/me/tomassetti/parser/antlr/TurinLexer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.4" vertical-offset="417" max-vertical-offset="1422">
-          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../idea/platform/core-api/src/com/intellij/lexer/FlexLexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
@@ -874,18 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinLanguage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/AntlrLexerState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2124">
           <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -893,14 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2106">
           <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/ElementTypeFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1746">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -915,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
           <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -930,7 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3744">
           <caret line="26" column="39" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -938,7 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,41 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
           <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/PsiElementFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/SyntaxError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/SyntaxErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/AstBuilderListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
-          <caret line="6" column="68" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,61 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/AntlrParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinParserDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="1422">
-          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/ranma.to">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
-          <caret line="27" column="138" selection-start-line="27" selection-start-column="138" selection-end-line="27" selection-end-column="138" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,17 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <caret line="22" column="58" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighlighterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,24 +821,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3186">
           <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighligher.java">
+    <entry file="file://$PROJECT_DIR$/../idea/platform/core-impl/src/com/intellij/psi/impl/source/tree/LeafPsiElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
-          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4230">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenTypes.java">
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinNodeType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1098">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/turin-parser-0.0.1-SNAPSHOT.jar!/me/tomassetti/parser/antlr/TurinLexer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1440">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/core-impl/src/com/intellij/extapi/psi/ASTWrapperPsiElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/core-impl/src/com/intellij/lang/ASTFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1602">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/AstBuilderListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="2160">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinLanguage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="270">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/AntlrParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1188">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/SyntaxError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/SyntaxErrorListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/core-impl/src/com/intellij/openapi/editor/ex/util/SegmentArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="985" max-vertical-offset="3456">
+          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/editor-ui-ex/src/com/intellij/openapi/editor/ex/util/LexerEditorHighlighter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="6840">
+          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/core-api/src/com/intellij/psi/PsiElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8366" max-vertical-offset="9666">
+          <caret line="564" column="0" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/parser/PsiElementFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/antlradaptor/lexer/ElementTypeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="355" max-vertical-offset="1746">
+          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ranma.to">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinColorSettingsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1094,22 +955,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinAstFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="1440">
-          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="1458">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinTokenTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+          <caret line="25" column="64" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../idea/platform/core-impl/src/com/intellij/psi/impl/source/tree/LeafPsiElement.java">
+    <entry file="file://$PROJECT_DIR$/../idea/platform/core-api/src/com/intellij/util/KeyedLazyInstanceEP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12338157" vertical-offset="0" max-vertical-offset="4230">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/editor-ui-api/src/com/intellij/openapi/fileTypes/SyntaxHighlighterBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/editor-ui-api/src/com/intellij/openapi/fileTypes/SyntaxHighlighter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
+          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/core-api/src/com/intellij/openapi/editor/markup/TextAttributes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3096">
+          <caret line="33" column="62" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/core-api/src/com/intellij/openapi/editor/colors/TextAttributesKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1459" max-vertical-offset="2772">
+          <caret line="172" column="34" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../idea/platform/editor-ui-api/src/com/intellij/openapi/editor/DefaultLanguageHighlighterColors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighlighterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding>
-            <element signature="e#1967#1968#0" expanded="true" />
-            <element signature="e#1994#1995#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/highlighting/TurinSyntaxHighligher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/parser/TurinLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
+          <caret line="26" column="94" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/tomassetti/turin/idea/TurinParserDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.054836255" vertical-offset="0" max-vertical-offset="1313">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

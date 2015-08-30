@@ -1,0 +1,30 @@
+{
+  parserClass="me.tomassetti.turin.idea.parser.TurinIdeaParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Turin"
+  psiImplClassSuffix="Impl"
+  psiPackage="me.tomassetti.turin.idea.psi"
+  psiImplPackage="me.tomassetti.turin.idea.psi.impl"
+
+  elementTypeHolderClass="me.tomassetti.turin.idea.psi.TurinTypes"
+  elementTypeClass="me.tomassetti.turin.idea.psi.TurinElementType"
+  tokenTypeClass="me.tomassetti.turin.idea.psi.TurinTokenType"
+}
+
+turinFile ::= namespaceDefinition nls turinFileElement_*
+
+private turinFileElement_ ::= (propertyDefinition|typeDefinition|nls)
+
+nls ::= NL*
+
+namespaceDefinition ::= NAMESPACE_KW ID NL
+
+propertyDefinition ::= PROPERTY_KW TID COLON ID NL
+
+typeDefinition ::= TYPE_KW TID LBRACKET NL (typeElement_)  RBRACKET NL
+
+private typeElement_ ::= (propertyDefinition|propertyReference)
+
+propertyReference ::= PROPERTY_KW ID

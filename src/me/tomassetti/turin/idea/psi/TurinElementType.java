@@ -1,14 +1,11 @@
-package me.tomassetti.turin.idea.parser;
+package me.tomassetti.turin.idea.psi;
 
 import com.intellij.psi.tree.IElementType;
 import me.tomassetti.turin.idea.TurinLanguage;
 
-/**
- * Created by federico on 30/08/15.
- */
-public class TurinNodeType extends IElementType {
+public class TurinElementType extends IElementType {
 
-    public TurinNodeType(String debugName) {
+    public TurinElementType(String debugName) {
         super(debugName, TurinLanguage.INSTANCE);
     }
 

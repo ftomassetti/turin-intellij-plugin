@@ -26,7 +26,7 @@
       <fileTypeFactory implementation="me.tomassetti.turin.idea.TurinFileFactory"/>
       <lang.parserDefinition language="Turin" implementationClass="me.tomassetti.turin.idea.TurinParserDefinition"/>
       <lang.syntaxHighlighterFactory key="Turin" implementationClass="me.tomassetti.turin.idea.highlighting.TurinSyntaxHighlighterFactory"/>
-      <!--<colorSettingsPage implementation="me.tomassetti.turin.idea.highlighting.TurinColorSettingsPage"/>-->
+      <colorSettingsPage implementation="me.tomassetti.turin.idea.highlighting.TurinColorSettingsPage"/>
   </extensions>
 
   <application-components>

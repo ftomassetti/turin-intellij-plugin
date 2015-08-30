@@ -2,15 +2,14 @@ package me.tomassetti.turin.idea.highlighting;
 
 import com.intellij.lexer.Lexer;
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors;
-import com.intellij.openapi.editor.SyntaxHighlighterColors;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase;
 import com.intellij.psi.tree.IElementType;
-import me.tomassetti.turin.idea.parser.TurinLexer;
-import me.tomassetti.turin.idea.parser.TurinTokenTypes;
+import me.tomassetti.turin.idea.lexer.MyAwfulLexer;
+import me.tomassetti.turin.idea.lexer.MyLexerAdapter;
+import me.tomassetti.turin.idea.lexer.TurinLexerAdapter;
+import me.tomassetti.turin.idea.psi.TurinTypes;
 import org.jetbrains.annotations.NotNull;
-
-import java.io.Reader;
 
 import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAttributesKey;
 
@@ -31,20 +30,18 @@ public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
     @NotNull
     @Override
     public Lexer getHighlightingLexer() {
-        return new TurinLexer();
+        return new MyLexerAdapter();
     }
 
     @NotNull
     @Override
     public TextAttributesKey[] getTokenHighlights(IElementType tokenType) {
-        /*if (TurinTokenTypes.KEYWORDS.contains(tokenType)) {
-            return KEYWORDS_KEYS;
-        } else if (TurinTokenTypes.IDENTIFIERS.contains(tokenType)) {
+        if (tokenType.equals(TurinTypes.ID)){
             return IDENTIFIER_KEYS;
-        } else if (TurinTokenTypes.COMMENTS.contains(tokenType)) {
-            return COMMENT_KEYS;
-        } else {*/
+        } else if (tokenType.equals(TurinTypes.NAMESPACE_KW)||tokenType.equals(TurinTypes.PROPERTY_KW)||tokenType.equals(TurinTypes.TYPE_KW)) {
+            return KEYWORDS_KEYS;
+        } else {
             return new TextAttributesKey[]{DefaultLanguageHighlighterColors.CLASS_NAME};
-        //}
+        }
     }
 }

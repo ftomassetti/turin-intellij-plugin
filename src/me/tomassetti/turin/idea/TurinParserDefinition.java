@@ -1,32 +1,34 @@
 package me.tomassetti.turin.idea;
 
-import com.intellij.lang.*;
+import com.intellij.lang.ASTNode;
+import com.intellij.lang.Language;
+import com.intellij.lang.ParserDefinition;
+import com.intellij.lang.PsiParser;
 import com.intellij.lexer.Lexer;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.FileViewProvider;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
-import com.intellij.psi.tree.IElementType;
+import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
-import me.tomassetti.turin.idea.antlradaptor.parser.AntlrParser;
-import me.tomassetti.turin.idea.antlradaptor.parser.SyntaxErrorListener;
-import me.tomassetti.turin.idea.parser.TurinAstFactory;
-import me.tomassetti.turin.idea.parser.TurinLexer;
-import org.antlr.v4.runtime.TokenStream;
-import org.antlr.v4.runtime.tree.ParseTree;
+import me.tomassetti.turin.idea.lexer.MyAwfulLexer;
+import me.tomassetti.turin.idea.lexer.MyLexerAdapter;
+import me.tomassetti.turin.idea.lexer.TurinLexerAdapter;
+import me.tomassetti.turin.idea.parser.TurinIdeaParser;
+import me.tomassetti.turin.idea.psi.TurinTypes;
 import org.jetbrains.annotations.NotNull;
 
 public class TurinParserDefinition implements ParserDefinition {
     public static final TokenSet COMMENTS = TokenSet.create();
-    public static final TokenSet WHITE_SPACES = TokenSet.create();
+    public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
 
     public static final IFileElementType FILE = new IFileElementType(Language.<TurinLanguage>findInstance(TurinLanguage.class));
 
     @NotNull
     @Override
     public Lexer createLexer(Project project) {
-        return new TurinLexer();
+        return new MyLexerAdapter();
     }
 
     @NotNull
@@ -46,22 +48,7 @@ public class TurinParserDefinition implements ParserDefinition {
 
     @NotNull
     public PsiParser createParser(final Project project) {
-        return new AntlrParser<me.tomassetti.parser.antlr.TurinParser>(TurinLanguage.INSTANCE) {
-
-
-            @Override
-            protected me.tomassetti.parser.antlr.TurinParser createParserImpl(TokenStream tokenStream, IElementType root, PsiBuilder builder) {
-                me.tomassetti.parser.antlr.TurinParser turinParser = new me.tomassetti.parser.antlr.TurinParser(tokenStream);
-                turinParser.removeErrorListeners();
-                turinParser.addErrorListener(new SyntaxErrorListener());
-                return  turinParser;
-            }
-
-            @Override
-            protected ParseTree parseImpl(me.tomassetti.parser.antlr.TurinParser parser, IElementType root, PsiBuilder builder) {
-                return parser.turinFile();
-            }
-        };
+        return new TurinIdeaParser();
     }
 
     @Override
@@ -79,7 +66,7 @@ public class TurinParserDefinition implements ParserDefinition {
 
     @NotNull
     public PsiElement createElement(ASTNode node) {
-        return TurinAstFactory.createInternalParseTreeNode(node);
+        return TurinTypes.Factory.createElement(node);
     }
 
 }

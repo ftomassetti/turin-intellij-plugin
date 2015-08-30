@@ -30,7 +30,7 @@ public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
     @NotNull
     @Override
     public Lexer getHighlightingLexer() {
-        return new MyLexerAdapter();
+        return new MyAwfulLexer();
     }
 
     @NotNull

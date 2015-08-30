@@ -1,0 +1,6 @@
+namespace manga
+
+type MangaCharacter {
+    property String : name
+    property UInt   : age
+}

@@ -24,6 +24,8 @@
 
   <extensions defaultExtensionNs="com.intellij">
       <fileTypeFactory implementation="me.tomassetti.turin.idea.TurinFileFactory"/>
+      <lang.parserDefinition language="Turin" implementationClass="me.tomassetti.turin.idea.TurinParserDefinition"/>
+      <lang.syntaxHighlighterFactory key="Simple" implementationClass="me.tomassetti.turin.idea.highlighting.TurinSyntaxHighlighterFactory"/>
   </extensions>
 
   <application-components>

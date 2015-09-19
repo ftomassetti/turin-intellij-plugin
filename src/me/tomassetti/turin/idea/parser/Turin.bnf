@@ -1,5 +1,6 @@
 {
   parserClass="me.tomassetti.turin.idea.parser.TurinIdeaParser"
+  parserUtilClass="me.tomassetti.turin.idea.parser.TurinIdeaParserUtil"
 
   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
 
@@ -17,14 +18,14 @@ turinFile ::= namespaceDefinition nls turinFileElement_*
 
 private turinFileElement_ ::= (propertyDefinition|typeDefinition|nls)
 
-nls ::= NL*
+nls ::= NL+
 
 namespaceDefinition ::= NAMESPACE_KW ID NL
 
 propertyDefinition ::= PROPERTY_KW TID COLON ID NL
 
-typeDefinition ::= TYPE_KW TID LBRACKET NL (typeElement_)  RBRACKET NL
+typeDefinition ::= TYPE_KW TID LBRACKET NL (typeElement_)* RBRACKET NL
 
-private typeElement_ ::= (propertyDefinition|propertyReference)
+private typeElement_ ::= (propertyDefinition|propertyReference|nls)
 
-propertyReference ::= PROPERTY_KW ID
+propertyReference ::= PROPERTY_KW ID NL

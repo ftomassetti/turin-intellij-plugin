@@ -12,6 +12,7 @@ import com.intellij.psi.PsiFile;
 import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
+import me.tomassetti.turin.idea.lexer.ExtraTokenTypes;
 import me.tomassetti.turin.idea.lexer.MyAwfulLexer;
 import me.tomassetti.turin.idea.lexer.MyLexerAdapter;
 import me.tomassetti.turin.idea.lexer.TurinLexerAdapter;
@@ -20,7 +21,7 @@ import me.tomassetti.turin.idea.psi.TurinTypes;
 import org.jetbrains.annotations.NotNull;
 
 public class TurinParserDefinition implements ParserDefinition {
-    public static final TokenSet COMMENTS = TokenSet.create();
+    public static final TokenSet COMMENTS = TokenSet.create(ExtraTokenTypes.LINE_COMMENT);
     public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
 
     public static final IFileElementType FILE = new IFileElementType(Language.<TurinLanguage>findInstance(TurinLanguage.class));
@@ -28,7 +29,7 @@ public class TurinParserDefinition implements ParserDefinition {
     @NotNull
     @Override
     public Lexer createLexer(Project project) {
-        return new MyLexerAdapter();
+        return new TurinLexerAdapter();
     }
 
     @NotNull

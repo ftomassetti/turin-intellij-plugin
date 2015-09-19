@@ -5,6 +5,7 @@ import com.intellij.openapi.editor.DefaultLanguageHighlighterColors;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase;
 import com.intellij.psi.tree.IElementType;
+import me.tomassetti.turin.idea.lexer.ExtraTokenTypes;
 import me.tomassetti.turin.idea.lexer.MyAwfulLexer;
 import me.tomassetti.turin.idea.lexer.MyLexerAdapter;
 import me.tomassetti.turin.idea.lexer.TurinLexerAdapter;
@@ -30,18 +31,20 @@ public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
     @NotNull
     @Override
     public Lexer getHighlightingLexer() {
-        return new MyAwfulLexer();
+        return new TurinLexerAdapter();
     }
 
     @NotNull
     @Override
     public TextAttributesKey[] getTokenHighlights(IElementType tokenType) {
-        if (tokenType.equals(TurinTypes.ID)){
+        if (tokenType.equals(TurinTypes.ID) || tokenType.equals(TurinTypes.TID)){
             return IDENTIFIER_KEYS;
         } else if (tokenType.equals(TurinTypes.NAMESPACE_KW)||tokenType.equals(TurinTypes.PROPERTY_KW)||tokenType.equals(TurinTypes.TYPE_KW)) {
             return KEYWORDS_KEYS;
+        } else if (tokenType.equals(ExtraTokenTypes.LINE_COMMENT)) {
+            return COMMENT_KEYS;
         } else {
-            return new TextAttributesKey[]{DefaultLanguageHighlighterColors.CLASS_NAME};
+            return EMPTY_KEYS;
         }
     }
 }

@@ -1,0 +1,6 @@
+namespace todo
+
+type Item {
+    Bool : completed
+
+}

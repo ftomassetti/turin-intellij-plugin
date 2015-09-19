@@ -1,6 +1,14 @@
 namespace manga
 
+
+
+// ciao
 type MangaCharacter {
+    // ciao
     property String : name
+    // b
     property UInt   : age
 }
+
+
+

@@ -11,7 +11,7 @@ import java.io.StringReader;
 public class ProvaLexer {
 
     public static void main(String[] args) throws IOException {
-        TurinLexer turinLexer = new TurinLexer(new StringReader("namespace"));
+        /*TurinLexer turinLexer = new TurinLexer(new StringReader("namespace"));
         //Object res = turinLexer.advance();
         //System.out.println();
 
@@ -22,7 +22,7 @@ public class ProvaLexer {
         System.out.println(myAwfulLexer.getTokenType());
         myAwfulLexer.advance();
         System.out.println(myAwfulLexer.getTokenType());
-        myAwfulLexer.advance();
+        myAwfulLexer.advance();*/
     }
 
 }

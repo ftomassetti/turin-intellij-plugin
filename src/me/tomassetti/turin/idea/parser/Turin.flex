@@ -5,6 +5,7 @@ import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.TokenType;
 
 import static me.tomassetti.turin.idea.psi.TurinTypes.*;
+import static me.tomassetti.turin.idea.lexer.ExtraTokenTypes.*;
 
 %%
 
@@ -16,7 +17,7 @@ import static me.tomassetti.turin.idea.psi.TurinTypes.*;
 %eof{  return;
 %eof}
 
-CRLF= \n|\r|\r\n
+CRLF= (\n|\r\n|\r)
 WHITE_SPACE=[\ \t\f]+
 END_OF_LINE_COMMENT=("//")[^\r\n]*
 
@@ -34,35 +35,38 @@ LSQUARE="["
 RSQUARE="]"
 COMMA=","
 COLON=":"
+ASSIGNMENT="="
+CONVERSION_OP="<-"
 
 //%state WAITING_VALUE
 
 %%
 
-//<YYINITIAL> {END_OF_LINE_COMMENT}                           { return LINE_COMMENT; }
+<YYINITIAL> {END_OF_LINE_COMMENT}    { return LINE_COMMENT; }
 
+<YYINITIAL> {WHITE_SPACE}            { return TokenType.WHITE_SPACE; }
 
-<YYINITIAL> {WHITE_SPACE} {System.out.println("WHITESPACE");}
-<YYINITIAL> {CRLF}                           { return NL; }
-<YYINITIAL> {NAMESPACE_KW}                           { return NAMESPACE_KW; }
-<YYINITIAL> {PROPERTY_KW}                           { return PROPERTY_KW; }
-<YYINITIAL> {TYPE_KW}                           { return TYPE_KW; }
+<YYINITIAL> {CRLF}                   { return NL; }
+<YYINITIAL> {NAMESPACE_KW}           { return NAMESPACE_KW; }
+<YYINITIAL> {PROPERTY_KW}            { return PROPERTY_KW; }
+<YYINITIAL> {TYPE_KW}                { return TYPE_KW; }
 //<YYINITIAL> {VAL_KW}                           { return VAL_KW; }
-<YYINITIAL> {ID}                           { return ID; }
-<YYINITIAL> {TID}                           { return TID; }
-<YYINITIAL> {LBRACKET}                           { return LBRACKET; }
-<YYINITIAL> {RBRACKET}                           { return RBRACKET; }
+
+<YYINITIAL> {ID}                     { return ID; }
+<YYINITIAL> {TID}                    { return TID; }
+
+<YYINITIAL> {LBRACKET}               { return LBRACKET; }
+<YYINITIAL> {RBRACKET}               { return RBRACKET; }
 
 //<YYINITIAL> {LPAREN}                           { return LPAREN; }
 
 //<YYINITIAL> {RPAREN}                           { return RPAREN; }
-
 //<YYINITIAL> {LSQUARE}                           { return LSQUARE; }
 
 //<YYINITIAL> {RSQUARE}                           { return RSQUARE; }
 
 //<YYINITIAL> {COMMA}                           { return COMMA; }
 
-<YYINITIAL> {COLON}                           { return COLON; }
+<YYINITIAL> {COLON}                  { return COLON; }
 
-<YYINITIAL> [^]                                { System.out.println("BAD_STUFF"); return TokenType.BAD_CHARACTER; }
+<YYINITIAL> [^ \t\f\n\r]             { return TokenType.BAD_CHARACTER; }

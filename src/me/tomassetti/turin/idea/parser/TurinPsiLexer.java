@@ -8,7 +8,7 @@ import org.antlr.v4.runtime.CharStream;
 public class TurinPsiLexer extends SimpleAntlrAdapter {
 
     public TurinPsiLexer(boolean hideChannel) {
-        super(TurinLanguage.INSTANCE, getTurinLexer(hideChannel));
+        super(TurinLanguage.getInstance(), getTurinLexer(hideChannel));
     }
 
     private static TurinLexer getTurinLexer(boolean hideChannel) {

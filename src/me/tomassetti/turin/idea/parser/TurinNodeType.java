@@ -9,7 +9,7 @@ import me.tomassetti.turin.idea.TurinLanguage;
 public class TurinNodeType extends IElementType {
 
     public TurinNodeType(String debugName) {
-        super(debugName, TurinLanguage.INSTANCE);
+        super(debugName, TurinLanguage.getInstance());
     }
 
     @Override

@@ -3,7 +3,14 @@ package me.tomassetti.turin.idea;
 import com.intellij.lang.Language;
 
 public class TurinLanguage extends Language {
-    public static final TurinLanguage INSTANCE = new TurinLanguage();
+    private static TurinLanguage INSTANCE;
+
+    public static TurinLanguage getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new TurinLanguage();
+        }
+        return INSTANCE;
+    }
 
     private TurinLanguage(){
         super("Turin");

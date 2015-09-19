@@ -10,7 +10,7 @@ import me.tomassetti.turin.idea.TurinLanguage;
 public class TurinTokenType extends IElementType {
     public TurinTokenType(String debugName) {
 
-        super(debugName, TurinLanguage.INSTANCE);
+        super(debugName, TurinLanguage.getInstance());
     }
 
     @Override

@@ -15,7 +15,11 @@ import org.jetbrains.annotations.NotNull;
 
 public class TurinParserDefinition implements ParserDefinition {
 
-    public static final IFileElementType FILE = new IFileElementType(Language.<TurinLanguage>findInstance(TurinLanguage.class));
+    public static final IFileElementType FILE = new IFileElementType(TurinLanguage.getInstance());
+
+    public TurinParserDefinition() {
+        TurinLanguage turinLanguage = TurinLanguage.getInstance();
+    }
 
     @NotNull
     @Override

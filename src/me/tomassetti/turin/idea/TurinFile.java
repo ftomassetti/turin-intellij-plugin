@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 public class TurinFile extends PsiFileBase {
 
     protected TurinFile(@NotNull FileViewProvider viewProvider) {
-        super(viewProvider, TurinLanguage.INSTANCE);
+        super(viewProvider, TurinLanguage.getInstance());
     }
 
     @NotNull

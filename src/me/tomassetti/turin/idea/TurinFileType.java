@@ -6,15 +6,12 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-/**
- * Created by federico on 30/08/15.
- */
 public class TurinFileType extends LanguageFileType {
 
     public static final TurinFileType INSTANCE = new TurinFileType();
 
     private TurinFileType(){
-        super(TurinLanguage.INSTANCE);
+        super(TurinLanguage.getInstance());
     }
 
     @NotNull

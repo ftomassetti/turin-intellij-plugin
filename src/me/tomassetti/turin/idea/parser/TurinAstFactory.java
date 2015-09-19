@@ -59,7 +59,6 @@ public class TurinAstFactory extends ASTFactory {
     public static PsiElement createInternalParseTreeNode(ASTNode node) {
         PsiElement t;
         IElementType tokenType = node.getElementType();
-        System.out.println("FEDERICO "+node.getText()+" : " +node.getElementType().getIndex());
         PsiElementFactory factory = ruleElementTypeToPsiFactory.get(tokenType);
         if (factory != null) {
             t = factory.createElement(node);

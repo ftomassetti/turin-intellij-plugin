@@ -15,18 +15,18 @@ import java.util.List;
 
 public class TurinTokenTypes {
 
-    public static IElementType BAD_TOKEN_TYPE = new IElementType("BAD_TOKEN", TurinLanguage.INSTANCE);
+    public static IElementType BAD_TOKEN_TYPE = new IElementType("BAD_TOKEN", TurinLanguage.getInstance());
 
     public static final List<TokenElementType> TOKEN_ELEMENT_TYPES =
-            ElementTypeFactory.getTokenElementTypes(TurinLanguage.INSTANCE,
+            ElementTypeFactory.getTokenElementTypes(TurinLanguage.getInstance(),
                     Arrays.asList(TurinParser.tokenNames));
     public static final List<RuleElementType> RULE_ELEMENT_TYPES =
-            ElementTypeFactory.getRuleElementTypes(TurinLanguage.INSTANCE,
+            ElementTypeFactory.getRuleElementTypes(TurinLanguage.getInstance(),
                     Arrays.asList(TurinParser.ruleNames));
 
     public static final TokenSet STRINGS =
             ElementTypeFactory.createTokenSet(
-                    TurinLanguage.INSTANCE,
+                    TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     TurinLexer.STRING_START,
                     TurinLexer.STRING_STOP,
@@ -34,13 +34,13 @@ public class TurinTokenTypes {
 
     public static final TokenSet NUMBERS =
             ElementTypeFactory.createTokenSet(
-                    TurinLanguage.INSTANCE,
+                    TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     TurinLexer.INT);
 
     public static final TokenSet BRACKETS =
             ElementTypeFactory.createTokenSet(
-                    TurinLanguage.INSTANCE,
+                    TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     TurinLexer.LBRACKET,
                     TurinLexer.RBRACKET);
@@ -48,19 +48,19 @@ public class TurinTokenTypes {
 
     public static final TokenSet COMMENTS =
             ElementTypeFactory.createTokenSet(
-                    TurinLanguage.INSTANCE,
+                    TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     me.tomassetti.parser.antlr.TurinLexer.LINE_COMMENT);
 
     public static final TokenSet WHITESPACES =
             ElementTypeFactory.createTokenSet(
-                    TurinLanguage.INSTANCE,
+                    TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     me.tomassetti.parser.antlr.TurinLexer.WS);
 
     public static final TokenSet KEYWORDS =
             ElementTypeFactory.createTokenSet(
-                    TurinLanguage.INSTANCE,
+                    TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     TurinLexer.NAMESPACE_KW,
                     TurinLexer.TYPE_KW,
@@ -87,13 +87,13 @@ public class TurinTokenTypes {
 
     public static final TokenSet VALUE_IDENTIFIERS =
             ElementTypeFactory.createTokenSet(
-                    TurinLanguage.INSTANCE,
+                    TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     TurinLexer.VALUE_ID);
 
     public static final TokenSet TYPE_IDENTIFIERS =
             ElementTypeFactory.createTokenSet(
-                    TurinLanguage.INSTANCE,
+                    TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     TurinLexer.TYPE_ID, TurinLexer.BASIC_TYPE, TurinLexer.PRIMITIVE_TYPE, TurinLexer.VOID_KW);
 

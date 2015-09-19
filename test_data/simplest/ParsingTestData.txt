@@ -1,0 +1,9 @@
+FILE(0,15)
+  ASTWrapperPsiElement(turinFile)(0,15)
+    NamespaceDeclaration(namespaceDecl)(0,15)
+      PsiElement('namespace')('namespace')(0,9)
+      PsiWhiteSpace(' ')(9,10)
+      ASTWrapperPsiElement(qualifiedId)(10,15)
+        PsiElement(VALUE_ID)('manga')(10,15)
+    ASTWrapperPsiElement(nls)(15,15)
+      <empty list>

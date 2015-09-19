@@ -13,13 +13,12 @@ import org.antlr.v4.runtime.tree.ParseTree;
 class TurinPsiParser extends AntlrParser<TurinParser> {
 
     public TurinPsiParser() {
-        super(TurinLanguage.INSTANCE);
+        super(TurinLanguage.getInstance());
     }
 
     @Override
     protected TurinParser createParserImpl(TokenStream tokenStream, IElementType root, PsiBuilder builder) {
         TurinParser turinParser = new TurinParser(tokenStream);
-        System.out.println("FEDERICO: PARSING WITH TOKENSTREAM " + tokenStream);
         turinParser.removeErrorListeners();
         turinParser.addErrorListener(new SyntaxErrorListener());
         return  turinParser;

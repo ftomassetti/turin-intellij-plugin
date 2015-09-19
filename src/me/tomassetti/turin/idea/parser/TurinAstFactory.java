@@ -12,6 +12,8 @@ import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.tree.IFileElementType;
 import me.tomassetti.parser.antlr.*;
 import me.tomassetti.turin.idea.antlradaptor.parser.PsiElementFactory;
+import me.tomassetti.turin.idea.psi.NamespaceDeclaration;
+import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 
 
 import java.util.HashMap;
@@ -21,11 +23,7 @@ public class TurinAstFactory extends ASTFactory {
     private static final Map<IElementType, PsiElementFactory> ruleElementTypeToPsiFactory = new HashMap<IElementType, PsiElementFactory>();
     static {
         // later auto gen with tokens from some spec in grammar?
-        //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(me.tomassetti.parser.antlr.TurinParser.RU), RulesNode.Factory.INSTANCE);
-        //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(ANTLRv4Parser.RULE_parserRuleSpec), ParserRuleSpecNode.Factory.INSTANCE);
-        //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(ANTLRv4Parser.RULE_lexerRule), LexerRuleSpecNode.Factory.INSTANCE);
-        //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(ANTLRv4Parser.RULE_grammarSpec), GrammarSpecNode.Factory.INSTANCE);
-        //ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(ANTLRv4Parser.RULE_action), AtAction.Factory.INSTANCE);
+        ruleElementTypeToPsiFactory.put(TurinTokenTypes.RULE_ELEMENT_TYPES.get(TurinParser.RULE_namespaceDecl), NamespaceDeclaration.Factory.INSTANCE);
     }
 
     /** Create a FileElement for root or a parse tree CompositeElement (not

@@ -12,15 +12,16 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 import java.util.Map;
 
-/**
- * Created by federico on 30/08/15.
- */
 public class TurinColorSettingsPage implements ColorSettingsPage {
 
     private static final AttributesDescriptor[] DESCRIPTORS = new AttributesDescriptor[]{
             new AttributesDescriptor("Comment", TurinSyntaxHighligher.COMMENT),
             new AttributesDescriptor("Keyword", TurinSyntaxHighligher.KEYWORD),
-            new AttributesDescriptor("Identifier", TurinSyntaxHighligher.IDENTIFIER),
+            new AttributesDescriptor("Value Identifier", TurinSyntaxHighligher.VALUE_IDENTIFIER),
+            new AttributesDescriptor("Type Identifier", TurinSyntaxHighligher.TYPE_IDENTIFIER),
+            new AttributesDescriptor("Brackets", TurinSyntaxHighligher.BRACKETS),
+            new AttributesDescriptor("Number", TurinSyntaxHighligher.NUMBER),
+            new AttributesDescriptor("String", TurinSyntaxHighligher.STRING)
     };
 
     @Nullable
@@ -41,7 +42,9 @@ public class TurinColorSettingsPage implements ColorSettingsPage {
         return "// Example\n" +
                 "namespace manga\n"+
                 "\n"+
-                "type MangaCharacter {\n"+
+                "type MangaCharacter {\n" +
+                "   has String name\n"+
+                "   has Int age\n"+
                 "}\n";
     }
 

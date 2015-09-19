@@ -6,9 +6,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * Created by federico on 30/08/15.
- */
 public class TurinSyntaxHighlighterFactory extends SyntaxHighlighterFactory {
     @NotNull
     @Override

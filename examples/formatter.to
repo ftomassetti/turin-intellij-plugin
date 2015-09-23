@@ -12,7 +12,6 @@ Void fatalError(String msg) {
 }
 
 CompilationUnit parse(String path) {
-	//throw UnsupportedOperationException("To be implemented")
 	return JavaParser.parse(File(path))
 }
 
@@ -26,19 +25,14 @@ String format(CompilationUnit cu) {
 }
 
 program JavaFormatter(String[] args) {
-	val debug = true
-	print("Java Formatter v0.1")
 	if args.length != 1 {
 		fatalError("pass exactly one parameter")
 	}
 	try {
 		val cu = parse(args[0])
-		if debug {
-			print("Parsed correctly")
-		}
-		print("OUTPUT:")
 		print(format(cu))
 	} catch Exception e {
 		fatalError("Issue parsing #{args[0]}: #{e.getMessage()}")
 	}
 }
+

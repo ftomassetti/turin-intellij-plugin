@@ -6,9 +6,7 @@ import com.intellij.psi.PsiReferenceProvider;
 import com.intellij.util.ProcessingContext;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * Created by federico on 23/09/15.
- */
+// TODO
 public class TurinReferenceProvider extends PsiReferenceProvider {
 
     @NotNull

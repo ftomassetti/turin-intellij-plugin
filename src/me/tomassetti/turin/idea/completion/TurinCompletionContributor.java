@@ -21,48 +21,18 @@ import com.intellij.util.IncorrectOperationException;
 import me.tomassetti.parser.antlr.TurinParser;
 import me.tomassetti.turin.idea.antlradaptor.lexer.RuleElementType;
 import me.tomassetti.turin.idea.antlradaptor.lexer.TokenElementType;
+import me.tomassetti.turin.idea.psi.PsiNodeRecognition;
+import me.tomassetti.turin.idea.psi.TurinPsiUtils;
 import me.tomassetti.turin.idea.parser.TurinTokenTypes;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
+import static me.tomassetti.turin.idea.psi.PsiNodeRecognition.*;
 
 public class TurinCompletionContributor extends CompletionContributor {
 
-    public boolean isNl(ASTNode node) {
-        if (node == null) {
-            return false;
-        }
-        if (node.getElementType() == null) {
-            return false;
-        }
-        return node.getElementType().getIndex() == TurinTokenTypes.TOKEN_ELEMENT_TYPES.get(TurinParser.NL).getIndex();
-    }
-
-    public boolean isWs(ASTNode node) {
-        if (node == null) {
-            return false;
-        }
-        if (node.getElementType() == null) {
-            return false;
-        }
-        return node.getElementType().getIndex() == TurinTokenTypes.TOKEN_ELEMENT_TYPES.get(TurinParser.WS).getIndex();
-    }
-
-    public boolean isNlWs(ASTNode node) {
-        return isNl(node) || isWs(node);
-    }
-
-    public boolean isRule(ASTNode node, int rule) {
-        if (node == null) {
-            return false;
-        }
-        if (node.getElementType() == null) {
-            return false;
-        }
-        return node.getElementType().getIndex() == TurinTokenTypes.RULE_ELEMENT_TYPES.get(rule).getIndex();
-    }
 
     private enum Place {
         STATEMENT_CONTAINER, FILE_MEMBER, TYPE_USAGE
@@ -197,91 +167,7 @@ public class TurinCompletionContributor extends CompletionContributor {
         System.out.println("FEDERICO " + msg);
     }
 
-    public static final InsertHandler<JavaPsiClassReferenceElement> TRY_SHORTENING_IN_TURIN = new InsertHandler<JavaPsiClassReferenceElement>() {
-
-        private void _handleInsert(final InsertionContext context, final JavaPsiClassReferenceElement item) {
-            final Editor editor = context.getEditor();
-            final PsiClass psiClass = item.getObject();
-            if (!psiClass.isValid()) return;
-
-            int endOffset = editor.getCaretModel().getOffset();
-            final String qname = psiClass.getQualifiedName();
-            if (qname == null) return;
-
-            if (endOffset == 0) return;
-
-            final Document document = editor.getDocument();
-            final PsiDocumentManager psiDocumentManager = PsiDocumentManager.getInstance(psiClass.getProject());
-            final PsiFile file = context.getFile();
-            log("file = " + file);
-            if (file.findElementAt(endOffset - 1) == null) return;
-
-            final OffsetKey key = OffsetKey.create("endOffset", false);
-            log("key = " + key);
-            context.getOffsetMap().addOffset(key, endOffset);
-            PostprocessReformattingAspect.getInstance(context.getProject()).doPostponedFormatting();
-
-            final int newOffset = context.getOffsetMap().getOffset(key);
-            log("newOffset = " + newOffset);
-            if (newOffset >= 0) {
-                endOffset = newOffset;
-            }
-            else {
-                //LOG.error(endOffset + " became invalid: " + context.getOffsetMap() + "; inserting " + qname);
-            }
-
-            final RangeMarker toDelete = JavaCompletionUtil.insertTemporary(endOffset, document, " ");
-            psiDocumentManager.commitAllDocuments();
-            log("file = " + file);
-            log("endOffset = " + endOffset);
-            PsiReference psiReference = file.findReferenceAt(endOffset - 1);
-
-            boolean insertFqn = true;
-            log("psiClass = " + psiClass);
-            log("psiReference = " + psiReference);
-            if (psiReference != null) {
-                final PsiManager psiManager = file.getManager();
-                if (psiManager.areElementsEquivalent(psiClass, resolveReference(psiReference))) {
-                    insertFqn = false;
-                }
-                else if (psiClass.isValid()) {
-                    try {
-                        context.setTailOffset(psiReference.getRangeInElement().getEndOffset() + psiReference.getElement().getTextRange().getStartOffset());
-                        final PsiElement newUnderlying = psiReference.bindToElement(psiClass);
-                        if (newUnderlying != null) {
-                            final PsiElement psiElement = CodeInsightUtilCore.forcePsiPostprocessAndRestoreElement(newUnderlying);
-                            if (psiElement != null) {
-                                for (final PsiReference reference : psiElement.getReferences()) {
-                                    if (psiManager.areElementsEquivalent(psiClass, resolveReference(reference))) {
-                                        insertFqn = false;
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (IncorrectOperationException e) {
-                        //if it's empty we just insert fqn below
-                    }
-                }
-            }
-            if (toDelete.isValid()) {
-                document.deleteString(toDelete.getStartOffset(), toDelete.getEndOffset());
-                context.setTailOffset(toDelete.getStartOffset());
-            }
-
-            if (insertFqn) {
-                AllClassesGetter.INSERT_FQN.handleInsert(context, item);
-            }
-        }
-
-        @Override
-        public void handleInsert(final InsertionContext context, final JavaPsiClassReferenceElement item) {
-            _handleInsert(context, item);
-            item.getTailType().processTail(context.getEditor(), context.getEditor().getCaretModel().getOffset());
-        }
-
-    };
+    //public static final InsertHandler<JavaPsiClassReferenceElement> TRY_SHORTENING_IN_TURIN = new JavaPsiClassReferenceElementInsertHandler();
 
     @Override
     public void fillCompletionVariants(@NotNull CompletionParameters parameters, @NotNull final CompletionResultSet result) {
@@ -293,7 +179,7 @@ public class TurinCompletionContributor extends CompletionContributor {
         System.out.println("FEDERICO ON " + parameters);
 
         Module module = ModuleUtilCore.findModuleForPsiElement(parameters.getOriginalPosition());
-        Project project = module.getProject();
+        final Project project = module.getProject();
 
         System.out.println("FEDERICO ON " + project);
         System.out.println("FEDERICO ON " + project.getClass());
@@ -360,7 +246,7 @@ public class TurinCompletionContributor extends CompletionContributor {
             AllClassesGetter.processJavaClasses(parameters, result.getPrefixMatcher(), parameters.getInvocationCount() <= 1, new Consumer<PsiClass>() {
                 @Override
                 public void consume(PsiClass psiClass) {
-                    result.addElement(createClassLookupItem(psiClass));
+                    result.addElement(createClassLookupItem(psiClass, project));
                 }
             });
             //ReferenceProvidersRegistry.getInstance().getRegistrar(JavaLanguage.INSTANCE).registerReferenceProvider();
@@ -372,8 +258,8 @@ public class TurinCompletionContributor extends CompletionContributor {
         }
     }
 
-    public static JavaPsiClassReferenceElement createClassLookupItem(final PsiClass psiClass) {
-        return AllClassesGetter.createLookupItem(psiClass, TRY_SHORTENING_IN_TURIN);
+    public static JavaPsiClassReferenceElement createClassLookupItem(final PsiClass psiClass, Project project) {
+        return AllClassesGetter.createLookupItem(psiClass, new TryShorteningTypeReference(project));
     }
 
     public TurinCompletionContributor() {
@@ -414,5 +300,129 @@ public class TurinCompletionContributor extends CompletionContributor {
                     }
                 }
         );*/
+    }
+
+    private static class TryShorteningTypeReference implements InsertHandler<JavaPsiClassReferenceElement> {
+
+        private Project project;
+
+        public TryShorteningTypeReference(Project project) {
+            this.project = project;
+        }
+
+        private void _handleInsert(final InsertionContext context, final JavaPsiClassReferenceElement item) {
+            final Editor editor = context.getEditor();
+            final PsiClass psiClass = item.getObject();
+            if (!psiClass.isValid()) return;
+
+            int endOffset = editor.getCaretModel().getOffset();
+            final String qname = psiClass.getQualifiedName();
+            if (qname == null) return;
+
+            if (endOffset == 0) return;
+
+            final Document document = editor.getDocument();
+            final PsiDocumentManager psiDocumentManager = PsiDocumentManager.getInstance(psiClass.getProject());
+            final PsiFile file = context.getFile();
+            log("file = " + file);
+            if (file.findElementAt(endOffset - 1) == null) return;
+
+            final OffsetKey key = OffsetKey.create("endOffset", false);
+            log("key = " + key);
+            context.getOffsetMap().addOffset(key, endOffset);
+            PostprocessReformattingAspect.getInstance(context.getProject()).doPostponedFormatting();
+
+            final int newOffset = context.getOffsetMap().getOffset(key);
+            log("newOffset = " + newOffset);
+            if (newOffset >= 0) {
+                endOffset = newOffset;
+            }
+            else {
+                //LOG.error(endOffset + " became invalid: " + context.getOffsetMap() + "; inserting " + qname);
+            }
+
+            boolean usingImportAndSimpleName = true;
+            if (usingImportAndSimpleName) {
+                PsiElement importDecl = new TurinPsiUtils(project).createImportStatement(psiClass.getQualifiedName());
+                System.out.println("FEDERICO importDecl = " + importDecl);
+                if (importDecl != null) {
+                    context.getFile().getNode().getChildren(null)[0].addChild(importDecl.getNode(), PsiNodeRecognition.findFirstNodeAfterImports(context.getFile()));
+                    PsiDocumentManager.getInstance(project).doPostponedOperationsAndUnblockDocument(document);
+                }
+                new SimpleClassNameInsertHandler(psiClass.getName()).handleInsert(context, item);
+                return;
+                //context.getDocument().replaceString(0, 0, "HEY "+psiClass.getQualifiedName());
+            }
+
+            final RangeMarker toDelete = JavaCompletionUtil.insertTemporary(endOffset, document, " ");
+            psiDocumentManager.commitAllDocuments();
+            log("file = " + file);
+            log("endOffset = " + endOffset);
+            PsiReference psiReference = file.findReferenceAt(endOffset - 1);
+
+            boolean insertFqn = true;
+            log("psiClass = " + psiClass);
+            log("psiReference = " + psiReference);
+            if (psiReference != null) {
+                final PsiManager psiManager = file.getManager();
+                if (psiManager.areElementsEquivalent(psiClass, resolveReference(psiReference))) {
+                    insertFqn = false;
+                }
+                else if (psiClass.isValid()) {
+                    try {
+                        context.setTailOffset(psiReference.getRangeInElement().getEndOffset() + psiReference.getElement().getTextRange().getStartOffset());
+                        final PsiElement newUnderlying = psiReference.bindToElement(psiClass);
+                        if (newUnderlying != null) {
+                            final PsiElement psiElement = CodeInsightUtilCore.forcePsiPostprocessAndRestoreElement(newUnderlying);
+                            if (psiElement != null) {
+                                for (final PsiReference reference : psiElement.getReferences()) {
+                                    if (psiManager.areElementsEquivalent(psiClass, resolveReference(reference))) {
+                                        insertFqn = false;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch (IncorrectOperationException e) {
+                        //if it's empty we just insert fqn below
+                    }
+                }
+            }
+            if (toDelete.isValid()) {
+                document.deleteString(toDelete.getStartOffset(), toDelete.getEndOffset());
+                context.setTailOffset(toDelete.getStartOffset());
+            }
+
+            if (insertFqn) {
+                AllClassesGetter.INSERT_FQN.handleInsert(context, item);
+            }
+        }
+
+        @Override
+        public void handleInsert(final InsertionContext context, final JavaPsiClassReferenceElement item) {
+            _handleInsert(context, item);
+            item.getTailType().processTail(context.getEditor(), context.getEditor().getCaretModel().getOffset());
+        }
+
+    }
+
+    private static class SimpleClassNameInsertHandler implements InsertHandler<JavaPsiClassReferenceElement> {
+
+        private String name;
+        public SimpleClassNameInsertHandler(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public void handleInsert(InsertionContext context, JavaPsiClassReferenceElement item) {
+            int start = context.getTailOffset() - 1;
+            while (start >= 0) {
+                final char ch = context.getDocument().getCharsSequence().charAt(start);
+                if (!Character.isJavaIdentifierPart(ch) && ch != '.') break;
+                start--;
+            }
+            context.getDocument().replaceString(start + 1, context.getTailOffset(), name);
+        }
     }
 }

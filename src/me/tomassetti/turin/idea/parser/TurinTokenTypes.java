@@ -45,7 +45,6 @@ public class TurinTokenTypes {
                     TurinLexer.LBRACKET,
                     TurinLexer.RBRACKET);
 
-
     public static final TokenSet COMMENTS =
             ElementTypeFactory.createTokenSet(
                     TurinLanguage.getInstance(),
@@ -83,7 +82,11 @@ public class TurinTokenTypes {
                     TurinLexer.PROGRAM_KW,
                     TurinLexer.RETURN_KW,
                     TurinLexer.SHARED_KW,
-                    TurinLexer.IMPORT_KW);
+                    TurinLexer.IMPORT_KW,
+                    TurinLexer.DEFAULT_KW,
+                    TurinLexer.PRIMITIVE_TYPE,
+                    TurinLexer.BASIC_TYPE,
+                    TurinLexer.VOID_KW);
 
     public static final TokenSet VALUE_IDENTIFIERS =
             ElementTypeFactory.createTokenSet(
@@ -95,7 +98,7 @@ public class TurinTokenTypes {
             ElementTypeFactory.createTokenSet(
                     TurinLanguage.getInstance(),
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
-                    TurinLexer.TYPE_ID, TurinLexer.BASIC_TYPE, TurinLexer.PRIMITIVE_TYPE, TurinLexer.VOID_KW);
+                    TurinLexer.TYPE_ID);
 
     public static RuleElementType getRuleElementType(@MagicConstant(valuesFromClass = TurinParser.class)int ruleIndex){
         return RULE_ELEMENT_TYPES.get(ruleIndex);

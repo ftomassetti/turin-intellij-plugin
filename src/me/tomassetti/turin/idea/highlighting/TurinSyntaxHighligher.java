@@ -13,7 +13,7 @@ import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAtt
 
 public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
 
-    public static final TextAttributesKey KEYWORD= createTextAttributesKey("TURIN_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD);
+    public static final TextAttributesKey KEYWORD = createTextAttributesKey("TURIN_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD);
     public static final TextAttributesKey VALUE_IDENTIFIER = createTextAttributesKey("TURIN_VALUE_IDENTIFIER", DefaultLanguageHighlighterColors.IDENTIFIER);
     public static final TextAttributesKey TYPE_IDENTIFIER = createTextAttributesKey("TURIN_TYPE_IDENTIFIER", DefaultLanguageHighlighterColors.CLASS_NAME);
     public static final TextAttributesKey COMMENT = createTextAttributesKey("TURIN_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);

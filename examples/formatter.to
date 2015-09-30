@@ -6,12 +6,19 @@ import com.github.javaparser.ast.CompilationUnit
 import com.github.javaparser.JavaParser
 import java.io.*
 
-Void fatalError(String msg) {
+type Options {
+    boolean newLinesAfterLBracket default false
+    boolean useTabs               default false
+    int     indentationSize       default 4 : _ >= 1 and _ <= 20 | "#{_name} should be between 1 and 20, instead it is #{_}"
+}
+
+void fatalError(String msg) {
 	eprint(msg)
 	System.exit(1)
 }
 
 CompilationUnit parse(String path) {
+	//throw UnsupportedOperationException("To be implemented")
 	return JavaParser.parse(File(path))
 }
 
@@ -25,14 +32,21 @@ String format(CompilationUnit cu) {
 }
 
 program JavaFormatter(String[] args) {
+	val options = Options(newLinesAfterLBracket=true)
+	print(options)
+	val debug = true
+	print("Java Formatter v0.1")
 	if args.length != 1 {
 		fatalError("pass exactly one parameter")
 	}
 	try {
 		val cu = parse(args[0])
+		if debug {
+			print("Parsed correctly")
+		}
+		print("OUTPUT:")
 		print(format(cu))
 	} catch Exception e {
 		fatalError("Issue parsing #{args[0]}: #{e.getMessage()}")
 	}
 }
-

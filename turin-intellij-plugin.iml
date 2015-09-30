@@ -21,5 +21,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="turin-compiler-0.0.1-20150929-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="turin-parser-0.0.1-20150924-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="turin-standard-library-0.0.1-20150928-SNAPSHOT" level="project" />
   </component>
 </module>

@@ -21,7 +21,8 @@ public class TurinColorSettingsPage implements ColorSettingsPage {
             new AttributesDescriptor("Type Identifier", TurinSyntaxHighligher.TYPE_IDENTIFIER),
             new AttributesDescriptor("Brackets", TurinSyntaxHighligher.BRACKETS),
             new AttributesDescriptor("Number", TurinSyntaxHighligher.NUMBER),
-            new AttributesDescriptor("String", TurinSyntaxHighligher.STRING)
+            new AttributesDescriptor("String", TurinSyntaxHighligher.STRING),
+            new AttributesDescriptor("Annotation", TurinSyntaxHighligher.ANNOTATIONS)
     };
 
     @Nullable
@@ -42,9 +43,10 @@ public class TurinColorSettingsPage implements ColorSettingsPage {
         return "// Example\n" +
                 "namespace manga\n"+
                 "\n"+
+                "@AnAnnotation\n"+
                 "type MangaCharacter {\n" +
-                "   has String name\n"+
-                "   has Int age\n"+
+                "   String name\n"+
+                "   int age\n"+
                 "}\n";
     }
 

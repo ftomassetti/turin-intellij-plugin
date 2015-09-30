@@ -21,6 +21,7 @@ public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
     public static final TextAttributesKey STRING = createTextAttributesKey("TURIN_STRING", DefaultLanguageHighlighterColors.STRING);
     public static final TextAttributesKey NUMBER = createTextAttributesKey("TURIN_NUMBER", DefaultLanguageHighlighterColors.NUMBER);
     public static final TextAttributesKey BRACKETS = createTextAttributesKey("TURIN_BRACKETS", DefaultLanguageHighlighterColors.BRACKETS);
+    public static final TextAttributesKey ANNOTATIONS = createTextAttributesKey("TURIN_ANNOTATIONS", DefaultLanguageHighlighterColors.METADATA);
 
     private static final TextAttributesKey[] KEYWORDS_KEYS = new TextAttributesKey[]{KEYWORD};
     private static final TextAttributesKey[] COMMENT_KEYS = new TextAttributesKey[]{COMMENT};
@@ -29,6 +30,7 @@ public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
     private static final TextAttributesKey[] STRING_KEYS = new TextAttributesKey[]{STRING};
     private static final TextAttributesKey[] NUMBER_KEYS = new TextAttributesKey[]{NUMBER};
     private static final TextAttributesKey[] BRACKETS_KEYS = new TextAttributesKey[]{BRACKETS};
+    private static final TextAttributesKey[] ANNOTATIONS_KEYS = new TextAttributesKey[]{ANNOTATIONS};
     private static final TextAttributesKey[] EMPTY_KEYS = new TextAttributesKey[]{};
 
     @NotNull
@@ -54,6 +56,8 @@ public class TurinSyntaxHighligher extends SyntaxHighlighterBase {
             return NUMBER_KEYS;
         } else if (TurinTokenTypes.BRACKETS.contains(tokenType)) {
             return BRACKETS_KEYS;
+        } else if (TurinTokenTypes.ANNOTATIONS.contains(tokenType)) {
+            return ANNOTATIONS_KEYS;
         } else {
             return EMPTY_KEYS;
         }

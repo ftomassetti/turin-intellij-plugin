@@ -100,6 +100,12 @@ public class TurinTokenTypes {
                     Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
                     TurinLexer.TYPE_ID);
 
+    public static final TokenSet ANNOTATIONS =
+            ElementTypeFactory.createTokenSet(
+                    TurinLanguage.getInstance(),
+                    Arrays.asList(me.tomassetti.parser.antlr.TurinLexer.tokenNames),
+                    TurinLexer.ANNOTATION_ID);
+
     public static RuleElementType getRuleElementType(@MagicConstant(valuesFromClass = TurinParser.class)int ruleIndex){
         return RULE_ELEMENT_TYPES.get(ruleIndex);
     }
